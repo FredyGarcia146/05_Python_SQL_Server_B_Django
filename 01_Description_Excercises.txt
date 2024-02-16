@@ -1,0 +1,49 @@
+Uso de: 
+-   Framework de Django para python
+-   Framework de Django Rest for Apis
+-   Archivos Py
+-   Archivos Css
+-   Archivos Html
+-   Archivos Js
+-   Uso de Entorno Virtual "python -m venv env"
+    -   Activar     :"env\Scripts\activate"
+    -   Descativar  :"deactivate"
+    -   Lista de Librerias  :"pip list"
+    -   Actualizar pip      :"py -m pip install --upgrade pip"
+
+
+Uso de Django
+    -   Instalar Django     :"pip install Django"
+    -   Inciar Proyecto     :"django-admin startproject Proyecto"   Notese que la palabra Proyecto es dependiendo del usuario
+    -   Correr Servidor     :"py manage.py runserver"    
+    -   Crear App           :"django-admin startapp Aplication1 "   Aplication1 Nombre que se desee
+    -   Crear App           :"py manage.py startapp Postulantes"    Postulantes Nombre que se desee
+        -   Despues de cada creacion actualizar el arhivo "settings.py" en INSTALLED_APPS
+    
+busqueda google :django 4.1.1 con conexion a sql server pypi
+
+    - Conexion a SQL Server :"pip install django-mssql-backend"
+    - Conexion a SQL Server :"pip install django-pyodbc-azure-2019" Django 2.1 hacia atras
+    - Conexion a SQL Server :"pip install mssql-django" Supports Django 3.2 and 4.0 (django-4.0.7) https://pypi.org/project/mssql-django/
+
+-   Para traer modelos existentes en la base de datosejecutamos, posteriormente hacemos limpieza:
+                            :python mysite/manage.py inspectdb > mysite/myapp/models.py
+
+-   Para hacer una instalacion masiva de librerias se usa:
+    -   un txt con el nombre de archivo : requirements.txt
+        contendra ejemplo:
+                Django==4.0.7
+                mssql-django==1.1.3
+                djangorestframework==3.11.0
+                djangorestframework-simplejwt==4.6.0
+                django-model-utils==4.0.0
+                Markdown==3.4.1
+                django-filter==22.1
+    -   pip install -r requirements.txt
+-   Permisos a la API de hacer DELETE, Añadir al REST_FRAMEWORK
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    
+
+
